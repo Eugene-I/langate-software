@@ -1,7 +1,76 @@
-#header {
-	
+#header{
+	padding:29px 0 30px;
+	> .container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-content: center;
+		align-items: center;
+	}
+	.col{
+		width:50%;
+		&.nav-holder {
+			padding:66px 0 0;
+			width:100%;
+		}
+	}
 }
 
-.logo {
+.contacts-list{
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    font-size:0;
+    line-height:0;
+    padding:0 6px 0 0;
+	@extend %listreset;
+	> li{
+		padding:0 0 0 21px;
+	}
+	.icon-email{
+		background-position:0 0;
+		height:22px;
+		width:32px;
+	}
+	.icon-approvals{
+		background-position:0 -50px;
+		height:25px;
+		width:31px;
+	}
+	.icon-phone{
+		background-position:0 -100px;
+		height:30px;
+		width:26px;
+	}
+}
 
+.nav-slide{}
+
+#nav{
+	color:#4c505c;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	align-items: flex-start;
+	font:33px/1.1364 $headings-font-family;
+	text-transform:uppercase;
+	@extend %listreset;
+	> li{
+		&.active,
+		&:hover {
+			> a{
+				color:$base-link-color;
+				text-decoration:none;
+			}
+		}
+		> a{
+			color:inherit;
+		}
+	}
 }

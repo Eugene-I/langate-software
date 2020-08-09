@@ -1,20 +1,32 @@
 header#header
-	h3 #{siteTitle}
-	.logo
-		a(href="#")
-			img(src="images/logo.png", alt="LogoText")
-	nav.nav-holder
-		a.nav-opener(href="#")
-			span
-		.nav-slide
-			ul
+	.container
+		.col
+			.logo
+				a(href="#")
+					img(src="images/logo.png", alt="Reward Your Performance", width="238", height="110")
+		.col
+			ul.contacts-list
 				li
-					a(href="#") First
+					a(href="#").icon.icon-email
 				li
-					a(href="#") Second
+					a(href="#").icon.icon-approvals
 				li
-					a(href="#") Third
-				li
-					a(href="#") Fourth
-				li
-					a(href="#") Fifth
+					a(href="#").icon.icon-phone
+		.col.nav-holder
+			nav
+				a.nav-opener(href="#")
+					span
+				.nav-slide
+					ul#nav
+						li
+							a(href="#") Home
+						li
+							a(href="#") Recognize
+						li
+							a(href="#") Network
+						li
+							a(href="#") Leaderboard
+						li
+							a(href="#") Programs
+						li
+							a(href="#") Activity

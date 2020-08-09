@@ -1,0 +1,125 @@
+.widget{
+	+ .widget{
+		margin:17px 0 0;
+	}
+}
+
+.widget.tile{
+	background-size:cover;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	align-items: flex-start;
+	color:$white;
+	font: 20px/1.2 $headings-font-family;
+	min-height: 99px;
+	padding:14px 17px 16px;
+	&.profile {
+		background:#b9d0dd;
+		font-size: 17px;
+		font-weight:300;
+		justify-content: flex-start;
+		letter-spacing: $letter-spacing-base/(-2);
+		padding:15px 13px 16px;
+		> div{
+			&:last-child {
+				text-align:left;
+			}
+		}
+		.avatar{
+			margin:0 14px 0 0;
+			max-width: 119px;
+			min-width: 119px;
+		}
+		.title{
+			display:block;
+			font-size: 27px;
+			font-weight:normal;
+			letter-spacing: 0.02em;
+			margin:-5px 0 -3px;
+			text-transform:uppercase;
+		}
+		p{
+			margin:0;
+		}
+	}
+	&.shopping {
+		background:url('images/img02.jpg') no-repeat 50% 50%;
+	}
+	&.budget {
+		background:url('images/img03.jpg') no-repeat 50% 50%;
+	}
+	&.badges {
+		background:url('images/img04.jpg') no-repeat 50% 50%;
+	}
+	&.awards {
+		background:url('images/img05.jpg') no-repeat 50% 50%;
+	}
+	&.quizzes {
+		background:url('images/img06.jpg') no-repeat 50% 50%;
+	}
+	&.form {
+		background:url('images/img07.jpg') no-repeat 50% 50%;
+		// display: flex;
+		flex-direction: column;
+		// flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: stretch;
+		align-items: stretch;
+	}
+	> div{
+		&:last-child {
+			text-align:right;
+		}
+	}
+	.title{
+		display:block;
+		font-family:$headings-font-family;
+		font-size: 23px;
+		font-weight:normal;
+		a{
+			color:inherit;
+			&:hover {
+				color:$base-link-color;
+				text-decoration:none;
+			}
+		}
+	}
+	.counter{
+		font-size: 20px;
+		font-weight:300;
+		.value{
+			display:block;
+			font-size: 36px;
+			max-resolution:2px 0 0;
+		}
+	}
+	.icon{
+		margin:4px -1px 0 0;
+	}
+	.icon-star{
+		background-position:0 -150px;
+		height:61px;
+		width:56px;
+	}
+	.icon-cup{
+		background-position:0 -250px;
+		height:57px;
+		width:53px;
+	}
+	.icon-lamp{
+		background-position:0 -350px;
+		height:62px;
+		width:57px;
+	}
+	form{
+		margin:7px 0 0;
+		input[type=email]{
+			height:32px;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}

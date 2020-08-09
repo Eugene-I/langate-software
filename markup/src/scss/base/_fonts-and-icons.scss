@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+.icon{
+	background:url('images/icons-sprite.png') no-repeat -9999px -9999px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('fonts/futurastd-book.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura Std';
+    src: url('fonts/futurastd-light.otf');
+    font-weight: 300;
+    font-style: normal;
+}

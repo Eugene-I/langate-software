@@ -1,7 +1,106 @@
 extends pug/extends/master
 
 block content
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, perspiciatis.
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, perspiciatis.
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, perspiciatis.
-	p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, perspiciatis.
+	.page-heading
+		strong.title Recognize Someone Now
+	section.section-recognize
+		.twocolumns.container
+			.content-holder
+				.content
+					h1 Recognize
+					.users-group
+						strong.title I would like to recognize the following group: 
+						ul
+							li
+								a(href="#") Dorian Greene
+							li
+								a(href="#") Gus Levy
+							li
+								a(href="#") Jeremy Stevens
+							li
+								a(href="#") Jeremy Stevens
+							li
+								a(href="#") Michael LaRoche
+							li
+								a(href="#") Jeanette Lincoln
+						a(href="#").btn.btn-link Add User
+						p I’d like to recognize 
+							a(href="#") a group of colleagues
+							|  for the 
+							a(href="#") Peer-to-Peer Program
+						.content-bottom
+							div
+								form(action="#")
+									.form-group
+										label(for="select1") Criteria
+										select(name="select1")
+											option Technical Excellence
+											option Technical Excellence
+											option Technical Excellence
+											option Technical Excellence
+											option Technical Excellence
+									.form-group
+										label(for="select2") Criteria
+										select(name="select2")
+											option 50
+											option 60
+											option 70
+											option 80
+											option 90
+							div
+								a(href="#").btn.btn-primary Review Awards
+					.message-holder
+						h2 Personal Message:
+						.message I would like to thank each of you for your outstanding contributions to helping us attain an on-time launch of project Narwhal. The downstream impact of delivering our new product set is competitively invaluable and key to supporting us and our partners' success in the marketplace. You guys embody our values and have delivered along every step of the way.
+					h2 e-Card Preview:
+					| gallery paste here
+					form(action="#").form-inline
+						.form-group
+							input(type="submit", value="Send Copy To:")
+						.form-group
+							input(type="email", placeholder="Email")
+			.aside-holder
+				aside
+					.widget.tile.profile
+						.avatar
+							img(src="images/img01.jpg", alt="Image description", width="119", height="119")
+						div
+							strong.title
+								a(href="#") Anna Parker
+							p.position Senior Director, Total Rewards
+					.widget.tile.shopping
+						div
+							strong.title Go Shopping
+						div
+							.counter
+								.value 1,124
+								| Shopping Points
+					.widget.tile.budget
+						div
+							strong.title My Budget
+						div
+							.counter
+								.value 1,932
+								| Points to Give
+					.widget.tile.badges
+						div
+							strong.title My Badges
+						div
+							.icon.icon-star
+					.widget.tile.awards
+						div
+							strong.title My Awards
+						div
+							.icon.icon-cup
+					.widget.tile.quizzes
+						div
+							strong.title Quizzes
+						div
+							.icon.icon-lamp
+					.widget.tile.form
+						div
+							strong.title Redeem On-The-Spot Award
+						div
+							form(action="#")
+								.form-group
+									input(type="email", placeholder="Email")

@@ -18,7 +18,7 @@ textarea {
 	@include placeholder {
 		color: $placeholder-color;
 	}
-	color: $placeholder-color;
+	color: $base-text-color;
 	-webkit-appearance: none;
 	-webkit-border-radius: 0;
 	box-sizing: border-box;
@@ -26,18 +26,14 @@ textarea {
 	background: $form-element-background;
 	border: 1px solid $form-element-border-color;
 	padding: $form-element-padding;
-	font-size: 16px;
-	line-height: 20px;
-	height: 40px;
+	font-size: 23px;
+	line-height: 30px;
+	height: 42px;
 	width: 100%;
 	margin: 0;
 	outline: none;
 	box-shadow: none;
 	transition: border 0.3s;
-
-	&:focus {
-		border-color: $form-element-focus-border-color;
-	}
 }
 
 select {

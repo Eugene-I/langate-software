@@ -1,12 +1,109 @@
-#wrapper {
-	overflow: hidden;
-	width: 100%;
-	position: relative;
+#wrapper{
+	background:url('images/bg01.jpg') no-repeat 100% 0;
+	max-width: $max-container-width;
 }
 
-.container {
-	@extend %clearfix;
+.container{
+	margin:0 auto;
 	max-width: $max-container-width;
-	padding: 0 $trim;
-	margin: 0 auto;
+	padding-right: $gap/2;
+	padding-left: $gap/2;
+}
+
+.page-heading{
+	color:#959494;
+	margin:0 auto;
+	max-width: 1220px;
+	overflow:hidden;
+	padding: 0 $gap/2 10px;
+	.title{
+		display:inline-block;
+		vertical-align:top;
+		font-size: 23px;
+		font-weight:normal;
+		letter-spacing: $letter-spacing-base;
+		line-height:1.2609;
+		position:relative;
+		&:before {
+			background:rgba(#4c505c, 0.2);
+			bottom:0;
+			content: '';
+			left:100%;
+			margin:0 0 0 18px;
+			position:absolute;
+			top:-1px;
+			width:400%;
+		}
+	}
+}
+
+.section-recognize{
+	.twocolumns{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		align-content: flex-start;
+		align-items: flex-start;
+		padding:30px 0 50px;
+		> div{
+			padding:0 $gap/2;
+		}
+		.content-holder{
+			flex:1 1 auto;
+		}
+		.aside-holder{
+			order: -1;
+			min-width: calc(372px + #{$gap});
+			max-width: calc(372px + #{$gap});
+		}
+	}
+	.content{
+		margin:-8px 0 0;
+	}
+	.users-group{
+		line-height:1;
+		.title{
+			display:block;
+			font-weight:normal;
+			margin:0 0 18px;
+		}
+		ul{
+			background:rgba($white, 0.6);
+			border: 2px solid rgba(#ebebeb, 0.6);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-start;
+			padding:2px;
+			@extend %listreset;
+			li{
+				padding:0 5px 0 0;
+			}
+			a{
+				background:rgba(#5e6a77, 0.5);
+				color:$white;
+				display:inline-block;
+				vertical-align:top;
+				font-weight:normal;
+				padding:7px 32px 8px 8px;
+				position:relative;
+				&:hover {
+					background:#5e6a77;
+					text-decoration:none;
+				}
+				&:before {
+					content: 'x';
+					line-height:1;
+					margin:-2px 0 0;
+					position:absolute;
+					right:10px;
+					top:50%;
+					transform:translateY(-50%);
+				}
+			}
+		}
+	}
 }

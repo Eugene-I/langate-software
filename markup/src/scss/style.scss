@@ -28,7 +28,8 @@ $media-expressions: (
 @import 'base/reset';
 @import 'base/typography';
 @import 'base/forms';
+@import 'base/fonts-and-icons';
 
+@import 'layout/boxes';
 @import 'layout/header';
-@import 'layout/footer';
 @import 'layout/common';
