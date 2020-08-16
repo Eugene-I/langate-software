@@ -21,6 +21,8 @@ $media-expressions: (
 
 @import 'vendors/include-media';
 @import 'vendors/normalize';
+@import 'vendors/slick/_slick.scss';
+@import 'vendors/slick/_slick-override.scss';
 
 @import 'base/variables';
 @import 'base/mixins';

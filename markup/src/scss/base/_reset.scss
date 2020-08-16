@@ -16,6 +16,9 @@ body {
 	min-width: $base-min-width;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	@include media("<desktop") {
+		font-size: 14px;
+	}
 }
 
 // adaptive images

@@ -3,8 +3,9 @@
 // Color names - http://name-of-color.com/
 
 // $gray: #999;
-$black: #000;
-$white: #fff;
+$black:						#000;
+$brand-primary:				#5e6a77;
+$white:						#fff;
 // $light-blue: #39f;
 
 $base-font-sans-serif: 'Open Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
@@ -28,17 +29,11 @@ $gap: 40px;
 
 $base-min-width: 320px;
 // $max-content-width: 1140px;
-$max-container-width: 1616px;
+$max-container-width:			1616px;
 
 // Links
 $base-link-color:				#f78f1e;
 // $base-link-hover-color: $black;
-
-// // Buttons 
-// $btn-color: $white;
-// $btn-background: $black;
-// $btn-padding: 0.4em 0.7em;
-// $btn-font-size: inherit;
 
 // Forms
 $form-element-background:			rgba($white, 0.3);

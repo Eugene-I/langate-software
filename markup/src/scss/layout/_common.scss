@@ -1,6 +1,9 @@
 #wrapper{
 	background:url('images/bg01.jpg') no-repeat 100% 0;
-	max-width: $max-container-width;
+	overflow:hidden;
+	@include media("<desktop") {
+		background-size:50% auto;
+	}
 }
 
 .container{
@@ -24,6 +27,9 @@
 		letter-spacing: $letter-spacing-base;
 		line-height:1.2609;
 		position:relative;
+		@include media("<desktop") {
+			font-size: 18px;
+		}
 		&:before {
 			background:rgba(#4c505c, 0.2);
 			bottom:0;
@@ -46,44 +52,71 @@
 		align-content: flex-start;
 		align-items: flex-start;
 		padding:30px 0 50px;
+		@include media("<desktop") {
+			display:block;
+			padding:15px 0 20px;
+		}
 		> div{
 			padding:0 $gap/2;
 		}
 		.content-holder{
-			flex:1 1 auto;
+			width:calc(100% - 372px - #{$gap});
+			@include media("<widescreen") {
+				width:calc(100% - 272px - #{$gap});
+			}
+			@include media("<desktop") {
+				width:auto;
+			}
 		}
 		.aside-holder{
 			order: -1;
-			min-width: calc(372px + #{$gap});
 			max-width: calc(372px + #{$gap});
+			min-width: calc(372px + #{$gap});
+			@include media("<widescreen") {
+				max-width: calc(272px + #{$gap});
+				min-width: calc(272px + #{$gap});
+			}
+			@include media("<desktop") {
+				max-width: none;
+				min-width: 0;
+			}
+			.widget{
+				// width:50%;
+			}
 		}
 	}
 	.content{
 		margin:-8px 0 0;
+		width:100%;
 	}
 	.users-group{
 		line-height:1;
 		.title{
 			display:block;
+			font-size: 20px;
 			font-weight:normal;
 			margin:0 0 18px;
+			@include media("<tablet") {
+				font-size: 16px;
+			}
 		}
 		ul{
 			background:rgba($white, 0.6);
 			border: 2px solid rgba(#ebebeb, 0.6);
 			display: flex;
 			flex-direction: row;
-			flex-wrap: nowrap;
+			flex-wrap: wrap;
 			justify-content: flex-start;
 			align-content: flex-start;
 			align-items: flex-start;
-			padding:2px;
+			margin:0 0 17px;
+			// padding:2px;
 			@extend %listreset;
 			li{
-				padding:0 5px 0 0;
+				padding:2px;
 			}
 			a{
-				background:rgba(#5e6a77, 0.5);
+				background:rgba($brand-primary, 0.5);
 				color:$white;
 				display:inline-block;
 				vertical-align:top;
@@ -91,7 +124,7 @@
 				padding:7px 32px 8px 8px;
 				position:relative;
 				&:hover {
-					background:#5e6a77;
+					background:$brand-primary;
 					text-decoration:none;
 				}
 				&:before {
@@ -104,6 +137,58 @@
 					transform:translateY(-50%);
 				}
 			}
+		}
+		.btn-link{
+			font-size: 20px;
+			font-weight:300;
+			margin:0 0 18px;
+			@include media("<desktop") {
+				font-size: 14px;
+			}
+		}
+		.note{
+			display:block;
+			font-size: 22px;
+			font-style:normal;
+			@include media("<desktop") {
+				font-size: 16px;
+			}
+		}
+	}
+	.form-select{
+		padding:27px 0 24px;
+		.form-group{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
+			padding:0 0 8px;
+			label{
+				color:#2b2b2b;
+				font-weight:normal;
+				flex-basis: 119px;
+			}
+		}
+	}
+	.message-holder{
+		padding:0 0 33px;
+		h2{
+			margin:0 0 6px;
+		}
+		.message{
+			background:$brand-primary;
+			color:$white;
+			padding:15px 27px 17px;
+			@include media("<tablet") {
+				padding:10px;
+			}
+		}
+	}
+	.gallery-box{
+		h2{
+			margin:0 0 9px;
 		}
 	}
 }

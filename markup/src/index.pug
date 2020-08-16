@@ -24,41 +24,132 @@ block content
 							li
 								a(href="#") Jeanette Lincoln
 						a(href="#").btn.btn-link Add User
-						p I’d like to recognize 
+						em.note I’d like to recognize 
 							a(href="#") a group of colleagues
 							|  for the 
 							a(href="#") Peer-to-Peer Program
-						.content-bottom
-							div
-								form(action="#")
-									.form-group
-										label(for="select1") Criteria
-										select(name="select1")
-											option Technical Excellence
-											option Technical Excellence
-											option Technical Excellence
-											option Technical Excellence
-											option Technical Excellence
-									.form-group
-										label(for="select2") Criteria
-										select(name="select2")
-											option 50
-											option 60
-											option 70
-											option 80
-											option 90
-							div
-								a(href="#").btn.btn-primary Review Awards
+					form(action="#").form-select
+						.form-group
+							label(for="select1") Criteria
+							select(name="select1")
+								option Technical Excellence
+								option Technical Excellence
+								option Technical Excellence
+								option Technical Excellence
+								option Technical Excellence
+						.form-group
+							label(for="select2") Points
+							select(name="select2")
+								option 50
+								option 60
+								option 70
+								option 80
+								option 90
 					.message-holder
 						h2 Personal Message:
 						.message I would like to thank each of you for your outstanding contributions to helping us attain an on-time launch of project Narwhal. The downstream impact of delivering our new product set is competitively invaluable and key to supporting us and our partners' success in the marketplace. You guys embody our values and have delivered along every step of the way.
-					h2 e-Card Preview:
-					| gallery paste here
+					.gallery-box
+						h2 e-Card Preview:
+						.quotes-slider.js-slick-quotes
+							.slider-for
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p I would like to thank each of you for your outstanding contributions to helping us attain an on-time launch  of project Narwhal.  The downstream impact of delivering our new product set is competitively invaluable and key to supporting us and our partners' success in the marketplace.  You guys embody our values and have delivered along every step of the way.
+												a(href="#").author Anna Parker
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2015
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, voluptatibus!
+												a(href="#").author Someone
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2016
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic iure, illum molestiae quibusdam, explicabo cum.
+												a(href="#").author Someone
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2017
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem odit provident molestias eum quisquam laborum mollitia pariatur, nam repudiandae.
+												a(href="#").author Someone
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2018
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores, doloremque velit, expedita corporis rerum ab doloribus. Quis, exercitationem delectus. Officiis architecto asperiores eos quo.
+												a(href="#").author Someone
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2019
+								div
+									.quote-box
+										.image-holder
+											img(src="images/slide101.jpg", alt="Image description", width="555", height="540")
+										.slide-content
+											.top
+												strong.title Criteria: Technical Excellence
+												p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque atque, distinctio recusandae nesciunt mollitia porro numquam aliquid labore accusantium nulla voluptatibus, culpa facilis dignissimos magnam similique provident ea modi obcaecati.
+												a(href="#").author Someone
+											.bottom
+												strong.title Award Date: 
+													time(datetime="2015-10-19") 10/19/2020
+							.slider-nav
+								div
+									.image-holder
+										img(src="images/slide101-thumbnail.jpg", alt="Image description", width="78", height="78")
+								div
+									.image-holder
+										img(src="images/slide102-thumbnail.jpg", alt="Image description", width="78", height="78")
+								div
+									.image-holder
+										img(src="images/slide103-thumbnail.jpg", alt="Image description", width="78", height="78")
+								div
+									.image-holder
+										img(src="images/slide104-thumbnail.jpg", alt="Image description", width="78", height="78")
+								div
+									.image-holder
+										img(src="images/slide105-thumbnail.jpg", alt="Image description", width="78", height="78")
+								div
+									.image-holder
+										img(src="images/slide106-thumbnail.jpg", alt="Image description", width="78", height="78")
 					form(action="#").form-inline
 						.form-group
-							input(type="submit", value="Send Copy To:")
-						.form-group
+							strong.title Send Copy To:
 							input(type="email", placeholder="Email")
+						.form-group
+							//- input(type="submit", value='Review Awards')
+							a(href="#").btn.btn-primary Review Awards
 			.aside-holder
 				aside
 					.widget.tile.profile

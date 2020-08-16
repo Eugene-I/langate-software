@@ -1,0 +1,70 @@
+.quotes-slider{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	margin:0 -10px;
+	@include media("<desktop") {
+		display:block;
+	}
+	> div{
+		padding:0 10px;
+		&:first-child {
+			width:57.2%;
+			@include media("<widescreen") {
+				width:calc(100% - 192px);
+			}
+			@include media("<desktop") {
+				width:100%;
+			}
+		}
+	}
+	.slider-nav{
+		margin:-8px;
+		width:30%;
+		@include media("<1300px") {
+			width:auto;
+		}
+		@include media("<desktop") {
+			margin:0;
+			padding:15px 2px 0;
+		}
+		.slick-track{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-content: flex-start;
+			align-items: flex-start;
+			transform:none !important;
+			width:auto !important;
+		}
+		.slick-slide{
+			outline:0;
+			padding:8px;
+			&.slick-current {
+				.image-holder{
+					&:before {
+						display:block;
+					}
+				}
+			}
+		}
+		.image-holder{
+			position:relative;
+			&:before {
+				border: 5px solid #b1cbd9;
+				content: '';
+				display:none;
+				height:100%;
+				left:0;
+				position:absolute;
+				top:0;
+				width:100%;
+				z-index:10;
+			}
+		}
+	}
+}

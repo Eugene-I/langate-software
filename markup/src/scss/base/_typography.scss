@@ -25,10 +25,17 @@ h1, .h1 {
 	color:#5e6a77;
 	font-size: $h1-font-size;
 	margin:0 0 38px;
+	@include media("<desktop") {
+		font-size: 24px;
+		margin:0 0 10px;
+	}
 }
 
 h2, .h2 {
 	font-size: $h2-font-size;
+	@include media("<desktop") {
+		font-size: 16px;
+	}
 }
 
 /*h3, .h3 {
